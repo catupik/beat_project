@@ -162,3 +162,28 @@ drumKit.tempoSlider.addEventListener('input', function(e){
 drumKit.tempoSlider.addEventListener('change', function(e){
     drumKit.updateTempo(e);
 })
+
+
+gsap.from(".kick-track, .snare-track, .hihat-track", {
+    duration: 1,
+    opacity: 0,
+    y: 20,
+    stagger: 0.2,
+    ease: "power3.out"
+});
+
+gsap.from(".play, .tempo", {
+    duration: 1,
+    opacity: 0,
+    delay: 1,
+    ease: "power3.out"
+});
+
+gsap.from("h1", {
+    duration: 1,
+    opacity: 0,
+    x: -20,
+    stagger: 0.2,
+    delay: 0.5,
+    ease: "power3.out"
+});
